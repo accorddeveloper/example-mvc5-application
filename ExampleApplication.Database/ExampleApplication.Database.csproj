@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\CreateCountriesTable.cs" />
+    <Compile Include="Migrations\CreateRadioStationsTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Sql\CreateCountriesTable.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CreateRadioStationsTable.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <UsingTask TaskName="FluentMigrator.MSBuild.Migrate" AssemblyFile="..\packages\FluentMigrator.Tools.1.6.1\tools\AnyCPU\40\FluentMigrator.MSBuild.dll" />
