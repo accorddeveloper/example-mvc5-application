@@ -41,5 +41,5 @@ ExampleApplication.Database has the following MSBuild Task added to the .csproj 
 
 Thanks for checking it out. I hope it helps to serve as an example on how to develop RESTful applications using AutoFac, Web API 2 and FluentMigrator.
 
-Kind regards,
+Kind regards  
 Raf
