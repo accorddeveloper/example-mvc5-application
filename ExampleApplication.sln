@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication.UnitTest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E7B458C-9271-4DC5-938D-4A3279FBE3A0}"
 	ProjectSection(SolutionItems) = preProject
+		ReSharper\Migration.DotSettings = ReSharper\Migration.DotSettings
+		ReSharper\MigrationSql.DotSettings = ReSharper\MigrationSql.DotSettings
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -21,6 +23,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication.AcceptanceTests", "Tests\ExampleApplication.AcceptanceTests\ExampleApplication.AcceptanceTests.csproj", "{94FD3A3C-CCFE-43BD-87D8-700DD6B01AC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication.DatabaseTests", "Tests\ExampleApplication.DatabaseTests\ExampleApplication.DatabaseTests.csproj", "{5134C33A-C4B9-4358-9B0C-2370449B3FD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReSharper", "ReSharper", "{9C9A3B75-CD43-4A72-97CF-7B7864E0C201}"
+	ProjectSection(SolutionItems) = preProject
+		ReSharper\Migration.DotSettings = ReSharper\Migration.DotSettings
+		ReSharper\MigrationSql.DotSettings = ReSharper\MigrationSql.DotSettings
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
