@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication.UnitTest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E7B458C-9271-4DC5-938D-4A3279FBE3A0}"
 	ProjectSection(SolutionItems) = preProject
-		ReSharper\Migration.DotSettings = ReSharper\Migration.DotSettings
-		ReSharper\MigrationSql.DotSettings = ReSharper\MigrationSql.DotSettings
 		README.md = README.md
 	EndProjectSection
 EndProject
