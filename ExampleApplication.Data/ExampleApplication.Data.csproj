@@ -39,6 +39,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,11 +50,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Country.cs">
+      <DependentUpon>ExampleDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CountryMapping.cs">
+      <DependentUpon>ExampleDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ExampleContext.cs">
+      <DependentUpon>ExampleDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ExampleDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExampleDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\FakeDbSet.cs">
+      <DependentUpon>ExampleDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\FakeExampleContext.cs">
+      <DependentUpon>ExampleDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\IExampleContext.cs">
+      <DependentUpon>ExampleDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\RadioStation.cs">
+      <DependentUpon>ExampleDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\RadioStationMapping.cs">
+      <DependentUpon>ExampleDatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Entities\EF.Reverse.POCO.Core.ttinclude" />
+    <None Include="Entities\EF.Reverse.POCO.ttinclude" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\ExampleDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ExampleDatabase.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

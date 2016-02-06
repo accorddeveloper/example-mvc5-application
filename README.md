@@ -26,6 +26,7 @@ This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I w
 - ReSharper Cyclomatic Complexity extension
 - CodeMaid Visual Studio extension
 - Entity Framework Reverse POCO generator
+- T4 Toolbox for Visual Studio 2015
 
 **Please use the _CreateExampleDatabase.sql script in the ExampleApplication.Database project to create the database before compiling/running the database migrations.**
 
