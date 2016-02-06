@@ -33,10 +33,10 @@ ExampleApplication.Database has the following MSBuild Task added to the .csproj 
 
 ```xml
 <UsingTask TaskName="FluentMigrator.MSBuild.Migrate" AssemblyFile="..\packages\FluentMigrator.Tools.1.6.1\tools\AnyCPU\40\FluentMigrator.MSBuild.dll" />
-  <Target Name="AfterBuild">
-    <Migrate Database="SqlServer2014" Connection="ExampleDatabase" Target=".\bin\ExampleApplication.Database.dll">
-    </Migrate>
-  </Target>
+<Target Name="AfterBuild">
+  <Migrate Database="SqlServer2014" Connection="ExampleDatabase" Target=".\bin\ExampleApplication.Database.dll">
+  </Migrate>
+</Target>
 ```
 
 Thanks for checking it out. I hope it helps to serve as an example on how to develop RESTful applications using AutoFac, Web API 2 and FluentMigrator.
