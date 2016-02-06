@@ -27,7 +27,7 @@ This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I w
 - CodeMaid Visual Studio extension
 - Entity Framework Reverse POCO generator
 
-**Please use the Sql\_CreateExampleDatabase.sql script in the ExampleApplication.Database project to create the database before compiling/running the database migrations.**
+**Please use the _CreateExampleDatabase.sql script in the ExampleApplication.Database project to create the database before compiling/running the database migrations.**
 
 ExampleApplication.Database has the following MSBuild Task added to the .csproj file to run database migrations every time the project is compiled. All the SQL files bar _CreateExampleDatabase.sql are set as Embedded Resource so FluentMigrator can find them.
 
