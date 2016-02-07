@@ -1,5 +1,5 @@
 # example-mvc5-application
-This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I wanted to create an example application to demonstrate the way I develop web applications using Microsoft technologies.
+This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I wanted to create an example application to demonstrate the way I develop web applications using Microsoft technologies. The Web API application is called RESTful Radio API.
 
 **Used the following NuGet packages:**
 
