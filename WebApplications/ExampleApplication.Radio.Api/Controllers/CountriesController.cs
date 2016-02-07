@@ -9,13 +9,13 @@
     public class CountriesController : ApiController
     {
         /// <summary>
-        /// The get.
+        /// Gets all the countries supported by the API
         /// </summary>
         /// <returns>The <see cref="IHttpActionResult"/>.</returns>
         [Route("countries")]
         public IHttpActionResult Get()
         {
-            return Ok("OK");
+            return Ok(new { Name = "Api" });
         }
     }
 }

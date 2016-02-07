@@ -18,19 +18,21 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Api.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Api.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -97,7 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CountriesController.cs" />
+    <Compile Include="Controllers\SwaggerController.cs" />
     <Compile Include="IoC\AssemblyModule.cs" />
+    <Compile Include="Providers\DescriptionProvider.cs" />
+    <Compile Include="Providers\IDescriptionProvider.cs" />
     <Compile Include="Providers\ITitleProvider.cs" />
     <Compile Include="Owin\Program.cs" />
     <Compile Include="Providers\TitleProvider.cs" />

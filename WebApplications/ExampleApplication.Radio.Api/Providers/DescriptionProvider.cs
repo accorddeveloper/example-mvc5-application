@@ -4,9 +4,9 @@
     using ExampleApplication.Utilities;
     using System.Reflection;
 
-    internal class TitleProvider : ITitleProvider
+    public class DescriptionProvider : IDescriptionProvider
     {
-        public string Title => GetAssemblyInfo().ProductTitle;
+        public string Description => GetAssemblyInfo().Description;
 
         /// <summary>
         /// Gets the current assembly info.

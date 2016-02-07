@@ -16,6 +16,7 @@
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<TitleProvider>().As<ITitleProvider>();
+            builder.RegisterType<DescriptionProvider>().As<IDescriptionProvider>();
         }
     }
 }

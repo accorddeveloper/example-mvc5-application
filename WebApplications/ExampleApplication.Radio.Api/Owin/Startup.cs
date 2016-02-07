@@ -4,10 +4,11 @@
     using ExampleApplication.Utilities;
     using global::Owin;
     using Swashbuckle.Application;
+    using System.Linq;
     using System.Web.Http;
 
     /// <summary>
-    /// The default OWiN start-up class.
+    /// The default OWIN startup class.
     /// </summary>
     public class Startup
     {
@@ -15,19 +16,47 @@
         /// This code configures Web API. The Startup class is specified as a type parameter in the
         /// WebApp.Start method.
         /// </summary>
-        /// <param name="appBuilder">The OWiN app builder</param>
+        /// <param name="appBuilder">The OWIN app builder</param>
         public void Configuration(IAppBuilder appBuilder)
         {
             var config = new HttpConfiguration();
-            config
-                .EnableSwagger(c => c.SingleApiVersion("v1", IoCProvider.Resolve<ITitleProvider>().Title))
-                .EnableSwaggerUi();
+            config.EnableSwagger(c =>
+                {
+                    c.SingleApiVersion("v1", IoCProvider.Resolve<ITitleProvider>().Title)
+                        .Description(IoCProvider.Resolve<IDescriptionProvider>().Description);
+                    c.IncludeXmlComments($@"{System.AppDomain.CurrentDomain.BaseDirectory}\Api.xml");
+                }).EnableSwaggerUi();
+
+            RemoveSupportForXmlResponses(config);
+
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional });
+                "API",
+                "api/{controller}/{id}",
+                new { id = RouteParameter.Optional });
+
+            config.Routes.MapHttpRoute(
+                "Redirect",
+                "",
+                new { controller = "Swagger" });
 
             appBuilder.UseWebApi(config);
+        }
+
+        /// <summary>
+        /// Removes xml responses and defaults to json.
+        /// </summary>
+        /// <param name="config">The OWIN config.</param>
+        private static void RemoveSupportForXmlResponses(HttpConfiguration config)
+        {
+            var matches = config.Formatters
+                                .Where(f => f.SupportedMediaTypes.Any(m =>
+                                m.MediaType.ToString() == "application/xml" ||
+                                m.MediaType.ToString() == "text/xml"))
+                                .ToList();
+            foreach (var match in matches)
+            {
+                config.Formatters.Remove(match);
+            }
         }
     }
 }

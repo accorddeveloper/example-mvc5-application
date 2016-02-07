@@ -12,17 +12,17 @@
     public class Program
     {
         /// <summary>
-        /// The main method to start OWiN.
+        /// The main method to start OWIN.
         /// </summary>
         /// <param name="args">The args.</param>
         public static void Main(string[] args)
         {
-            Console.WriteLine("Starting {0}", IoCProvider.Resolve<ITitleProvider>().Title);
+            var baseAddress = AppSettings.ProvideValue<string>("Address");
 
-            const string BaseAddress = "http://localhost:9000/";
+            Console.WriteLine("Starting {0} at {1}", IoCProvider.Resolve<ITitleProvider>().Title, baseAddress);
 
             // Start OWIN host
-            using (WebApp.Start<Startup>(url: BaseAddress))
+            using (WebApp.Start<Startup>(url: baseAddress))
             {
                 PauseOnDebug();
             }

@@ -4,16 +4,29 @@
     using System.IO;
     using System.Reflection;
 
+    /// <summary>
+    /// Provides the information about an assembly.
+    /// </summary>
     public class AssemblyInfo
     {
+        /// <summary>
+        /// The assembly being analysed.
+        /// </summary>
+        private readonly Assembly assembly;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AssemblyInfo"/> class.
+        /// </summary>
+        /// <param name="assembly">The assembly.</param>
+        /// <exception cref="ArgumentNullException">The assembly parameter cannot be null</exception>
         public AssemblyInfo(Assembly assembly)
         {
             if (assembly == null)
-                throw new ArgumentNullException("assembly");
+            {
+                throw new ArgumentNullException(nameof(assembly));
+            }
             this.assembly = assembly;
         }
-
-        private readonly Assembly assembly;
 
         /// <summary>
         /// Gets the title property
@@ -22,8 +35,7 @@
         {
             get
             {
-                return GetAttributeValue<AssemblyTitleAttribute>(a => a.Title,
-                       Path.GetFileNameWithoutExtension(assembly.CodeBase));
+                return GetAttributeValue<AssemblyTitleAttribute>(a => a.Title, Path.GetFileNameWithoutExtension(this.assembly.CodeBase));
             }
         }
 
@@ -34,12 +46,9 @@
         {
             get
             {
-                string result = string.Empty;
-                Version version = assembly.GetName().Version;
-                if (version != null)
-                    return version.ToString();
-                else
-                    return "1.0.0.0";
+                var result = string.Empty;
+                var version = this.assembly.GetName().Version;
+                return version?.ToString() ?? "1.0.0.0";
             }
         }
 
@@ -78,11 +87,8 @@
         protected string GetAttributeValue<TAttr>(Func<TAttr,
           string> resolveFunc, string defaultResult = null) where TAttr : Attribute
         {
-            object[] attributes = assembly.GetCustomAttributes(typeof(TAttr), false);
-            if (attributes.Length > 0)
-                return resolveFunc((TAttr)attributes[0]);
-            else
-                return defaultResult;
+            var attributes = assembly.GetCustomAttributes(typeof(TAttr), false);
+            return attributes.Length > 0 ? resolveFunc((TAttr)attributes[0]) : defaultResult;
         }
     }
 }
