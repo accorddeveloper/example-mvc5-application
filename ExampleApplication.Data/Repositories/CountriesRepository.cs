@@ -1,7 +1,8 @@
 ﻿namespace ExampleApplication.Data.Repositories
 {
-    using Entities;
     using System.Collections.Generic;
+
+    using Entities;
 
     /// <summary>
     /// The countries repository.

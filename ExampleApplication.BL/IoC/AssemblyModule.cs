@@ -2,6 +2,8 @@
 {
     using Autofac;
 
+    using Directors;
+
     using Mappers;
 
     using Dto = DataTransfer;
@@ -19,6 +21,8 @@
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<RadioStationMapper>().As<IEntityToDtoMapper<Entities.RadioStation, Dto.RadioStation>>();
+            builder.RegisterType<CountryMapper>().As<IEntityToDtoMapper<Entities.Country, Dto.Country>>();
+            builder.RegisterType<GetCountriesDirector>().As<IGetCountries>();
         }
     }
 }

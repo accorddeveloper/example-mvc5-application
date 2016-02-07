@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountryMapperTests\WhenMappingEntityToDto.cs" />
+    <Compile Include="GetCountriesDirectorTests\WhenGettingAllCountries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RadioStationMapperTests\WhenMappingEntityToDto.cs" />
     <Compile Include="SettingsProviderTests\WhenGettingAMissingApplicationSetting.cs" />

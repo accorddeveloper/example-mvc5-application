@@ -1,11 +1,11 @@
 ﻿namespace ExampleApplication.Radio.Api.Controllers
 {
-    using ExampleApplication.Utilities;
     using System;
     using System.Net;
     using System.Net.Http;
     using System.Web.Http;
     using System.Web.Http.Description;
+    using ExampleApplication.Utilities;
 
     /// <summary>
     /// Helps find swagger.

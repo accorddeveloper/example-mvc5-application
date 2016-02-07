@@ -1,9 +1,9 @@
 ﻿namespace ExampleApplication.Radio.Api.Owin
 {
-    using ExampleApplication.Radio.Api.Providers;
+    using System;
     using ExampleApplication.Utilities;
     using Microsoft.Owin.Hosting;
-    using System;
+    using ExampleApplication.Radio.Api.Providers;
 
     /// <summary>
     /// The Radio API application.

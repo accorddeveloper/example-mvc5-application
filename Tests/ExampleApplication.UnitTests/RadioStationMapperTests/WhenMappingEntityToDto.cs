@@ -1,8 +1,8 @@
 ﻿namespace ExampleApplication.UnitTests.RadioStationMapperTests
 {
-    using ExampleApplication.BDD;
-    using ExampleApplication.BL.Mappers;
-    using ExampleApplication.Data.Entities;
+    using BDD;
+    using BL.Mappers;
+    using Data.Entities;
 
     using NUnit.Framework;
 

@@ -58,33 +58,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Country.cs">
-      <DependentUpon>ExampleDatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\CountryMapping.cs">
-      <DependentUpon>ExampleDatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\ExampleContext.cs">
-      <DependentUpon>ExampleDatabase.tt</DependentUpon>
-    </Compile>
     <Compile Include="Entities\ExampleDatabase.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ExampleDatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\FakeDbSet.cs">
-      <DependentUpon>ExampleDatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\FakeExampleContext.cs">
-      <DependentUpon>ExampleDatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\IExampleContext.cs">
-      <DependentUpon>ExampleDatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\RadioStation.cs">
-      <DependentUpon>ExampleDatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\RadioStationMapping.cs">
       <DependentUpon>ExampleDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="IoC\AssemblyModule.cs" />

@@ -1,11 +1,15 @@
 ﻿namespace ExampleApplication.Radio.Api.Owin
 {
-    using ExampleApplication.Radio.Api.Providers;
-    using ExampleApplication.Utilities;
-    using global::Owin;
-    using Swashbuckle.Application;
     using System.Linq;
     using System.Web.Http;
+
+    using Autofac.Integration.WebApi;
+
+    using ExampleApplication.Utilities;
+    using Swashbuckle.Application;
+
+    using global::Owin;
+    using ExampleApplication.Radio.Api.Providers;
 
     /// <summary>
     /// The OWIN startup class.
@@ -16,14 +20,17 @@
         /// This code configures the Web API. The Startup class is specified as a type parameter in
         /// the WebApp.Start method.
         /// </summary>
-        /// <param name="appBuilder">The OWIN app builder</param>
-        public void Configuration(IAppBuilder appBuilder)
+        /// <param name="app">The OWIN app builder</param>
+        public void Configuration(IAppBuilder app)
         {
-            var config = new HttpConfiguration();
+            var config = new HttpConfiguration
+            {
+                DependencyResolver = new AutofacWebApiDependencyResolver(IoCProvider.Container)
+            };
             AddSwaggerSupport(config);
             RemoveSupportForXmlResponses(config);
             MapRoutes(config);
-            appBuilder.UseWebApi(config);
+            app.UseWebApi(config);
         }
 
         /// <summary>

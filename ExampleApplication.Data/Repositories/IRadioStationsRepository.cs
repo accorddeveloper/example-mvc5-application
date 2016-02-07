@@ -1,7 +1,8 @@
 ﻿namespace ExampleApplication.Data.Repositories
 {
-    using ExampleApplication.Data.Entities;
     using System.Collections.Generic;
+
+    using ExampleApplication.Data.Entities;
 
     /// <summary>
     /// The RadioStationsRepository interface.

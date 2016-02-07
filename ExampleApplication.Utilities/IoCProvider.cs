@@ -9,19 +9,28 @@
     public static class IoCProvider
     {
         /// <summary>
-        /// The main IoC container.
+        /// The container instance.
         /// </summary>
-        private static readonly IContainer Container;
+        private static IContainer container;
 
         /// <summary>
-        /// Initializes static members of the <see cref="IoCProvider"/> class.
+        /// Gets the main IoC container.
         /// </summary>
-        static IoCProvider()
+        public static IContainer Container
         {
-            var builder = new ContainerBuilder();
-            var reader = new ConfigurationSettingsReader();
-            builder.RegisterModule(reader);
-            Container = builder.Build();
+            get
+            {
+                if (container != null)
+                {
+                    return container;
+                }
+
+                var builder = new ContainerBuilder();
+                var reader = new ConfigurationSettingsReader();
+                builder.RegisterModule(reader);
+                container = builder.Build();
+                return container;
+            }
         }
 
         /// <summary>

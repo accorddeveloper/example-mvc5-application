@@ -48,8 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTransfer\Country.cs" />
     <Compile Include="DataTransfer\RadioStation.cs" />
+    <Compile Include="Directors\GetCountriesDirector.cs" />
+    <Compile Include="Directors\IGetCountries.cs" />
     <Compile Include="IoC\AssemblyModule.cs" />
+    <Compile Include="Mappers\CountryMapper.cs" />
     <Compile Include="Mappers\IEntityToDtoMapper.cs" />
     <Compile Include="Mappers\RadioStationMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

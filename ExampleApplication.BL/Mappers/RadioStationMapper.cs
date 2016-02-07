@@ -9,7 +9,7 @@
     public class RadioStationMapper : IEntityToDtoMapper<Entities.RadioStation, Dto.RadioStation>
     {
         /// <summary>
-        /// Maps from RadioStation entity to RadioStation DTO
+        /// Maps from a RadioStation entity to a RadioStation DTO
         /// </summary>
         /// <param name="entity">A database entity.</param>
         /// <returns>The <see cref="Dto.RadioStation"/>.</returns>
