@@ -5,7 +5,7 @@
     using NUnit.Framework;
 
     /// <summary>
-    /// What happens when an action is performed.
+    /// What happens after an action has been performed.
     /// </summary>
     [AttributeUsage(AttributeTargets.Method)]
     public class ThenAttribute : TestAttribute
