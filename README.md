@@ -3,16 +3,19 @@ This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I w
 
 **Used the following NuGet packages:**
 
-- NUnit 3 for unit testing
+- NUnit 3
 - Moq
 - Helpful.BDD
 - SpecFlow 2 for acceptance testing
 - SpecFlow.NUnit
 - AutoFac for Inversion of Control using the Dependency Injection pattern
 - AutoFac.MVC5
+- Owin
+- AutoFac.Owin
 - ASP.NET MVC 5
 - ASP.NET Web API 2 for the RESTful endpoints
 - Swashbuckle Swagger
+- Newtonsoft.Json
 - RestSharp
 - Entity Framework
 - FluentMigrator
