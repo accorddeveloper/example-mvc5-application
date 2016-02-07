@@ -12,7 +12,7 @@
         /// </summary>
         /// <param name="key">The key which is preset in AppSettings</param>
         /// <typeparam name="T">Value type.</typeparam>
-        /// <returns>The <see cref="T"/>The application setting value.</returns>
+        /// <returns>The <see cref="T"/> The application setting value.</returns>
         public static T ProvideValue<T>(string key)
         {
             var value = ConfigurationManager.AppSettings[key];

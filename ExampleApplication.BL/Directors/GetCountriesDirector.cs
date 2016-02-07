@@ -28,12 +28,8 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="GetCountriesDirector"/> class.
         /// </summary>
-        /// <param name="countriesRepository">
-        /// The countries repository.
-        /// </param>
-        /// <param name="mapper">
-        /// The country mapper.
-        /// </param>
+        /// <param name="countriesRepository">The countries repository.</param>
+        /// <param name="mapper">The country mapper.</param>
         public GetCountriesDirector(ICountriesRepository countriesRepository, IEntityToDtoMapper<Entities.Country, Dto.Country> mapper)
         {
             this.countriesRepository = countriesRepository;
@@ -43,9 +39,7 @@
         /// <summary>
         /// Gets all the countries.
         /// </summary>
-        /// <returns>
-        /// A collection of <see cref="Dto.Country"/>.
-        /// </returns>
+        /// <returns>A collection of <see cref="Dto.Country"/>.</returns>
         public IEnumerable<Dto.Country> GetCountries() => this.countriesRepository.GetAll().Select(a => this.mapper.Map(a));
     }
 }

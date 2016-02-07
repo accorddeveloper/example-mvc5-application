@@ -23,14 +23,21 @@
         /// <param name="app">The OWIN app builder</param>
         public void Configuration(IAppBuilder app)
         {
-            var config = new HttpConfiguration
-            {
-                DependencyResolver = new AutofacWebApiDependencyResolver(IoCProvider.Container)
-            };
+            var config = new HttpConfiguration();
+            SetUpAutoFac(config);
             AddSwaggerSupport(config);
             RemoveSupportForXmlResponses(config);
             MapRoutes(config);
             app.UseWebApi(config);
+        }
+
+        /// <summary>
+        /// Adds AutoFac to the Web API application.
+        /// </summary>
+        /// <param name="config">The OWIN config.</param>
+        private static void SetUpAutoFac(HttpConfiguration config)
+        {
+            config.DependencyResolver = new AutofacWebApiDependencyResolver(IoCProvider.Container);
         }
 
         /// <summary>
@@ -41,27 +48,21 @@
         {
             config.EnableSwagger(c =>
             {
-                c.SingleApiVersion("v1", IoCProvider.Resolve<ISettingsProvider>().Title)
-                    .Description(IoCProvider.Resolve<ISettingsProvider>().Description);
+                var settingsProvider = IoCProvider.Resolve<ISettingsProvider>();
+                c.SingleApiVersion("v1", settingsProvider.Title)
+                    .Description(settingsProvider.Description);
                 c.IncludeXmlComments($@"{System.AppDomain.CurrentDomain.BaseDirectory}\Api.xml");
             }).EnableSwaggerUi();
         }
 
         /// <summary>
-        /// Maps all the URIs in the application.
+        /// Maps all the routes in the application.
         /// </summary>
         /// <param name="config">The OWIN config.</param>
         private static void MapRoutes(HttpConfiguration config)
         {
-            config.Routes.MapHttpRoute(
-                "API",
-                "api/{controller}/{id}",
-                 new { id = RouteParameter.Optional });
-
-            config.Routes.MapHttpRoute(
-                "Redirect",
-                "",
-                new { controller = "SwaggerRedirect" });
+            config.MapHttpAttributeRoutes();
+            config.Routes.MapHttpRoute("Redirect to Swagger", "", new { controller = "SwaggerRedirect" });
         }
 
         /// <summary>

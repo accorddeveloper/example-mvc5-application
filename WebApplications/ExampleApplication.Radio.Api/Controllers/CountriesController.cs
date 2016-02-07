@@ -18,9 +18,7 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="CountriesController"/> class.
         /// </summary>
-        /// <param name="getAction">
-        /// The GetAction provider.
-        /// </param>
+        /// <param name="getAction">The GetAction provider.</param>
         public CountriesController(IGetCountries getAction)
         {
             this.getAction = getAction;
