@@ -37,7 +37,7 @@
             config.Routes.MapHttpRoute(
                 "Redirect",
                 "",
-                new { controller = "Swagger" });
+                new { controller = "SwaggerRedirect" });
 
             appBuilder.UseWebApi(config);
         }

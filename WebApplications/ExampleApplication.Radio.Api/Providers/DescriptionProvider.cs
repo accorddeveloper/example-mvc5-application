@@ -4,8 +4,14 @@
     using ExampleApplication.Utilities;
     using System.Reflection;
 
+    /// <summary>
+    /// Provides the description of the application based on the assembly settings.
+    /// </summary>
     public class DescriptionProvider : IDescriptionProvider
     {
+        /// <summary>
+        /// Gets the description.
+        /// </summary>
         public string Description => GetAssemblyInfo().Description;
 
         /// <summary>

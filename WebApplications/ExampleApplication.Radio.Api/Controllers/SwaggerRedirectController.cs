@@ -8,9 +8,9 @@
     using System.Web.Http.Description;
 
     /// <summary>
-    /// Helpers find swagger.
+    /// Helps find swagger.
     /// </summary>
-    public class SwaggerController : ApiController
+    public class SwaggerRedirectController : ApiController
     {
         /// <summary>
         /// Redirects to swagger.
