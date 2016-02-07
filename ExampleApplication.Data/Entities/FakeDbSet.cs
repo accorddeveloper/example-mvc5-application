@@ -15,16 +15,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Data.Entity.Infrastructure;
 using System.Linq.Expressions;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Data;
-using System.Data.Entity.Core.Objects;
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Data.Entity.ModelConfiguration;
 using System.Threading;
-using DatabaseGeneratedOption = System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption;
 
 namespace ExampleApplication.Data.Entities
 {

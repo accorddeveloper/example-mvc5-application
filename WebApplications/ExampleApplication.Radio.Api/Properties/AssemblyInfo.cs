@@ -3,11 +3,11 @@ using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following set of attributes.
 // Change these attribute values to modify the information associated with an assembly.
-[assembly: AssemblyTitle("ExampleApplication.Data")]
-[assembly: AssemblyDescription("Data access")]
+[assembly: AssemblyTitle("RESTful Radio API")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExampleApplication.Data")]
+[assembly: AssemblyProduct("ExampleApplication.Radio.Api")]
 [assembly: AssemblyCopyright("Copyright © Rafał Bielec 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("28d2aa91-8e44-44fb-a946-8cdaed670c16")]
+[assembly: Guid("ae1965ff-8fd8-45ec-bbbd-94f1a161a20a")]
 
 // Version information for an assembly consists of the following four values:
 // 

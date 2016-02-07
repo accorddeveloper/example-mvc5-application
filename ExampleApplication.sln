@@ -28,6 +28,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReSharper", "ReSharper", "{
 		ReSharper\MigrationSql.DotSettings = ReSharper\MigrationSql.DotSettings
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApplications", "WebApplications", "{7B2B381F-6300-4733-810A-318C32E60AD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication.Radio.Api", "WebApplications\ExampleApplication.Radio.Api\ExampleApplication.Radio.Api.csproj", "{AE1965FF-8FD8-45EC-BBBD-94F1A161A20A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication.Utilities", "ExampleApplication.Utilities\ExampleApplication.Utilities.csproj", "{57450F45-E4C8-4A47-81AD-EAC79C138BCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +64,14 @@ Global
 		{5134C33A-C4B9-4358-9B0C-2370449B3FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5134C33A-C4B9-4358-9B0C-2370449B3FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5134C33A-C4B9-4358-9B0C-2370449B3FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1965FF-8FD8-45EC-BBBD-94F1A161A20A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1965FF-8FD8-45EC-BBBD-94F1A161A20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1965FF-8FD8-45EC-BBBD-94F1A161A20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1965FF-8FD8-45EC-BBBD-94F1A161A20A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57450F45-E4C8-4A47-81AD-EAC79C138BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57450F45-E4C8-4A47-81AD-EAC79C138BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57450F45-E4C8-4A47-81AD-EAC79C138BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57450F45-E4C8-4A47-81AD-EAC79C138BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,5 +80,6 @@ Global
 		{7CCE88F1-C90A-4938-935C-2ABEDB577A9F} = {C65AE961-E4CF-48D6-8A79-CBB18074EBB5}
 		{94FD3A3C-CCFE-43BD-87D8-700DD6B01AC4} = {C65AE961-E4CF-48D6-8A79-CBB18074EBB5}
 		{5134C33A-C4B9-4358-9B0C-2370449B3FD6} = {C65AE961-E4CF-48D6-8A79-CBB18074EBB5}
+		{AE1965FF-8FD8-45EC-BBBD-94F1A161A20A} = {7B2B381F-6300-4733-810A-318C32E60AD3}
 	EndGlobalSection
 EndGlobal
