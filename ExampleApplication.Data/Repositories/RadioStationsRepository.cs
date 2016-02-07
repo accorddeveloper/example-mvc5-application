@@ -1,8 +1,7 @@
 ﻿namespace ExampleApplication.Data.Repositories
 {
-    using System.Collections.Generic;
-
     using ExampleApplication.Data.Entities;
+    using System.Collections.Generic;
 
     /// <summary>
     /// The radio stations repository.

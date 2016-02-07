@@ -4,36 +4,35 @@
     using ExampleApplication.Utilities;
     using Microsoft.Owin.Hosting;
     using System;
-    using System.Diagnostics;
 
     /// <summary>
     /// The Radio API application.
     /// </summary>
     public class Program
     {
+        private static ISettingsProvider Settings => IoCProvider.Resolve<ISettingsProvider>();
+
         /// <summary>
         /// The main method to start OWIN.
         /// </summary>
         /// <param name="args">The args.</param>
         public static void Main(string[] args)
         {
-            var baseAddress = AppSettings.ProvideValue<string>("Address");
-
-            Console.WriteLine("Starting {0} at {1}", IoCProvider.Resolve<ITitleProvider>().Title, baseAddress);
+            Console.WriteLine("Starting {0} at {1}", Settings.Title, Settings.Address);
 
             // Start OWIN host
-            using (WebApp.Start<Startup>(url: baseAddress))
+            using (WebApp.Start<Startup>(url: Settings.Address))
             {
-                PauseOnDebug();
+                PauseToProcessRequests();
             }
         }
 
         /// <summary>
-        /// Stops the console when the app is running in DEBUG inside Visual Studio
+        /// Pauses the application to wait for incoming requests.
         /// </summary>
-        [Conditional("DEBUG")]
-        private static void PauseOnDebug()
+        private static void PauseToProcessRequests()
         {
+            Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
     }

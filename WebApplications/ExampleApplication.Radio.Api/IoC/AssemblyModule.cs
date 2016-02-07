@@ -17,6 +17,7 @@
         {
             builder.RegisterType<TitleProvider>().As<ITitleProvider>();
             builder.RegisterType<DescriptionProvider>().As<IDescriptionProvider>();
+            builder.RegisterType<SettingsProvider>().As<ISettingsProvider>();
         }
     }
 }

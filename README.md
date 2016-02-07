@@ -5,10 +5,10 @@ This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I w
 
 - NUnit 3
 - Moq
-- Helpful.BDD
+- BDD based on NUnit 3
 - SpecFlow 2 for acceptance testing
 - SpecFlow.NUnit
-- AutoFac for Inversion of Control using the Dependency Injection pattern
+- AutoFac for Inversion of Control using the Dependency Injection and Service Locator pattern
 - AutoFac.MVC5
 - Owin
 - AutoFac.Owin
@@ -23,6 +23,7 @@ This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I w
 
 **Used the following products and development tools:**
 
+- C# 6.0
 - Visual Studio 2015 Community Edition
 - SQL Server 2014 Express Edition
 - .NET Framework 4.5.2

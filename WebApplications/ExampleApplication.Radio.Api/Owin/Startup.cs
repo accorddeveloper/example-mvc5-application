@@ -8,42 +8,57 @@
     using System.Web.Http;
 
     /// <summary>
-    /// The default OWIN startup class.
+    /// The OWIN startup class.
     /// </summary>
     public class Startup
     {
         /// <summary>
-        /// This code configures Web API. The Startup class is specified as a type parameter in the
-        /// WebApp.Start method.
+        /// This code configures the Web API. The Startup class is specified as a type parameter in
+        /// the WebApp.Start method.
         /// </summary>
         /// <param name="appBuilder">The OWIN app builder</param>
         public void Configuration(IAppBuilder appBuilder)
         {
             var config = new HttpConfiguration();
-            config.EnableSwagger(c =>
-                {
-                    c.SingleApiVersion("v1", IoCProvider.Resolve<ITitleProvider>().Title)
-                        .Description(IoCProvider.Resolve<IDescriptionProvider>().Description);
-                    c.IncludeXmlComments($@"{System.AppDomain.CurrentDomain.BaseDirectory}\Api.xml");
-                }).EnableSwaggerUi();
-
+            AddSwaggerSupport(config);
             RemoveSupportForXmlResponses(config);
+            MapRoutes(config);
+            appBuilder.UseWebApi(config);
+        }
 
+        /// <summary>
+        /// Adds the Swagger UI to the RESTful application.
+        /// </summary>
+        /// <param name="config">The OWIN config.</param>
+        private static void AddSwaggerSupport(HttpConfiguration config)
+        {
+            config.EnableSwagger(c =>
+            {
+                c.SingleApiVersion("v1", IoCProvider.Resolve<ISettingsProvider>().Title)
+                    .Description(IoCProvider.Resolve<ISettingsProvider>().Description);
+                c.IncludeXmlComments($@"{System.AppDomain.CurrentDomain.BaseDirectory}\Api.xml");
+            }).EnableSwaggerUi();
+        }
+
+        /// <summary>
+        /// Maps all the URIs in the application.
+        /// </summary>
+        /// <param name="config">The OWIN config.</param>
+        private static void MapRoutes(HttpConfiguration config)
+        {
             config.Routes.MapHttpRoute(
                 "API",
                 "api/{controller}/{id}",
-                new { id = RouteParameter.Optional });
+                 new { id = RouteParameter.Optional });
 
             config.Routes.MapHttpRoute(
                 "Redirect",
                 "",
                 new { controller = "SwaggerRedirect" });
-
-            appBuilder.UseWebApi(config);
         }
 
         /// <summary>
-        /// Removes xml responses and defaults to json.
+        /// Removes xml responses and thus makes the application default to json.
         /// </summary>
         /// <param name="config">The OWIN config.</param>
         private static void RemoveSupportForXmlResponses(HttpConfiguration config)
