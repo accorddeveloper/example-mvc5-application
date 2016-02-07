@@ -1,6 +1,7 @@
 ﻿namespace ExampleApplication.Data.Repositories
 {
     using System.Collections.Generic;
+    using System.Linq;
 
     using Entities;
 
@@ -29,7 +30,7 @@
         /// <returns>The <see cref="Country"/>.</returns>
         public IEnumerable<Country> GetAll()
         {
-            return this.context.Countries;
+            return this.context.Countries.AsNoTracking().ToArray();
         }
     }
 }

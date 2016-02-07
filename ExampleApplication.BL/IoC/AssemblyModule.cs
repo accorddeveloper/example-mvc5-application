@@ -23,6 +23,7 @@
             builder.RegisterType<RadioStationMapper>().As<IEntityToDtoMapper<Entities.RadioStation, Dto.RadioStation>>();
             builder.RegisterType<CountryMapper>().As<IEntityToDtoMapper<Entities.Country, Dto.Country>>();
             builder.RegisterType<GetCountriesDirector>().As<IGetCountries>();
+            builder.RegisterType<GetRadioStationsDirector>().As<IGetRadioStations>();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace ExampleApplication.Data.Repositories
 {
     using System.Collections.Generic;
+    using System.Linq;
 
     using ExampleApplication.Data.Entities;
 
@@ -29,7 +30,7 @@
         /// <returns>The <see cref="RadioStation"/>.</returns>
         public IEnumerable<RadioStation> GetAll()
         {
-            return this.context.RadioStations;
+            return this.context.RadioStations.AsNoTracking().ToArray();
         }
     }
 }

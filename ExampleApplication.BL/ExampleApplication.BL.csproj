@@ -51,7 +51,9 @@
     <Compile Include="DataTransfer\Country.cs" />
     <Compile Include="DataTransfer\RadioStation.cs" />
     <Compile Include="Directors\GetCountriesDirector.cs" />
+    <Compile Include="Directors\GetRadioStationsDirector.cs" />
     <Compile Include="Directors\IGetCountries.cs" />
+    <Compile Include="Directors\IGetRadioStations.cs" />
     <Compile Include="IoC\AssemblyModule.cs" />
     <Compile Include="Mappers\CountryMapper.cs" />
     <Compile Include="Mappers\IEntityToDtoMapper.cs" />

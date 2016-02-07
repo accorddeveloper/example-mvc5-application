@@ -3,17 +3,17 @@
     using FluentMigrator;
 
     /// <summary>
-    /// Creates countries table.
+    /// Inserts radio stations.
     /// </summary>
-    [Migration(201602062124)]
-    public class CreateCountriesTable : Migration
+    [Migration(201602072207)]
+    public class InsertRadioStations : Migration
     {
         /// <summary>
         /// The up script.
         /// </summary>
         public override void Up()
         {
-            Execute.EmbeddedScript(@"CreateCountriesTable.sql");
+            Execute.EmbeddedScript(@"InsertRadioStations.sql");
         }
 
         /// <summary>

@@ -5,16 +5,16 @@
     using ExampleApplication.BL.DataTransfer;
 
     /// <summary>
-    /// Provides all the countries.
+    /// Provides all the radio stations.
     /// </summary>
-    public interface IGetCountries
+    public interface IGetRadioStations
     {
         /// <summary>
-        /// Gets all the countries.
+        /// Gets all the radio stations.
         /// </summary>
         /// <returns>
-        /// The <see cref="Country"/>.
+        /// The <see cref="RadioStation"/>.
         /// </returns>
-        IEnumerable<Country> GetCountries();
+        IEnumerable<RadioStation> GetRadioStations();
     }
 }

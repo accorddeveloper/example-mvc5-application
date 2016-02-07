@@ -3,7 +3,7 @@
     using FluentMigrator;
 
     /// <summary>
-    /// Create radio stations table.
+    /// Creates radio stations table.
     /// </summary>
     [Migration(201602062139)]
     public class CreateRadioStationsTable : Migration

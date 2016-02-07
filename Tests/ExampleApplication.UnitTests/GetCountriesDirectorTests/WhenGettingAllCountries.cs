@@ -74,7 +74,7 @@
         }
 
         /// <summary>
-        /// Then it should get contain UK in the countries.
+        /// Then it should contain the UK.
         /// </summary>
         [Then]
         public void ThenItShouldGetUK()
@@ -83,7 +83,7 @@
         }
 
         /// <summary>
-        /// Then it should get contain France in the countries.
+        /// Then it should contain France.
         /// </summary>
         [Then]
         public void ThenItShouldGetFrance()
@@ -92,7 +92,7 @@
         }
 
         /// <summary>
-        /// Then it should get contain Poland in the countries.
+        /// Then it should contain Poland.
         /// </summary>
         [Then]
         public void ThenItShouldGetPoland()

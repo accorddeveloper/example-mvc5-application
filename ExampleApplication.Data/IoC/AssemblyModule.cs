@@ -18,7 +18,7 @@
         {
             builder.RegisterType<CountriesRepository>().As<ICountriesRepository>();
             builder.RegisterType<RadioStationsRepository>().As<IRadioStationsRepository>();
-            builder.RegisterType<ExampleContext>().As<IExampleContext>().InstancePerDependency();
+            builder.RegisterType<ExampleContext>().As<IExampleContext>();
         }
     }
 }
