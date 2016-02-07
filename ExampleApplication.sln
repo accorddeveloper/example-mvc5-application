@@ -23,16 +23,19 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication.DatabaseTests", "Tests\ExampleApplication.DatabaseTests\ExampleApplication.DatabaseTests.csproj", "{5134C33A-C4B9-4358-9B0C-2370449B3FD6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReSharper", "ReSharper", "{9C9A3B75-CD43-4A72-97CF-7B7864E0C201}"
-	ProjectSection(SolutionItems) = preProject
-		ReSharper\Migration.DotSettings = ReSharper\Migration.DotSettings
-		ReSharper\MigrationSql.DotSettings = ReSharper\MigrationSql.DotSettings
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApplications", "WebApplications", "{7B2B381F-6300-4733-810A-318C32E60AD3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication.Radio.Api", "WebApplications\ExampleApplication.Radio.Api\ExampleApplication.Radio.Api.csproj", "{AE1965FF-8FD8-45EC-BBBD-94F1A161A20A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication.Utilities", "ExampleApplication.Utilities\ExampleApplication.Utilities.csproj", "{57450F45-E4C8-4A47-81AD-EAC79C138BCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileTemplates", "FileTemplates", "{98F9ED07-4535-4E2E-ACDA-CF70221CF0A6}"
+	ProjectSection(SolutionItems) = preProject
+		ReSharper\Migration.DotSettings = ReSharper\Migration.DotSettings
+		ReSharper\MigrationSql.DotSettings = ReSharper\MigrationSql.DotSettings
+		ReSharper\WhenBDD.DotSettings = ReSharper\WhenBDD.DotSettings
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,5 +84,6 @@ Global
 		{94FD3A3C-CCFE-43BD-87D8-700DD6B01AC4} = {C65AE961-E4CF-48D6-8A79-CBB18074EBB5}
 		{5134C33A-C4B9-4358-9B0C-2370449B3FD6} = {C65AE961-E4CF-48D6-8A79-CBB18074EBB5}
 		{AE1965FF-8FD8-45EC-BBBD-94F1A161A20A} = {7B2B381F-6300-4733-810A-318C32E60AD3}
+		{98F9ED07-4535-4E2E-ACDA-CF70221CF0A6} = {9C9A3B75-CD43-4A72-97CF-7B7864E0C201}
 	EndGlobalSection
 EndGlobal

@@ -4,6 +4,8 @@ This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I w
 **Used the following NuGet packages:**
 
 - NUnit 3 for unit testing
+- Moq
+- Helpful.BDD
 - SpecFlow 2 for acceptance testing
 - SpecFlow.NUnit
 - AutoFac for Inversion of Control using the Dependency Injection pattern
@@ -23,10 +25,15 @@ This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I w
 - .NET Framework 4.5.2
 - JetBrains ReSharper 10
 - ReSharper.StyleCop extension
+- StyleCop
 - ReSharper Cyclomatic Complexity extension
 - CodeMaid Visual Studio extension
 - Entity Framework Reverse POCO generator
 - T4 Toolbox for Visual Studio 2015
+
+**ReSharper**
+
+I have also included my ReSharper templates for generating migrations and unit-test classes.
 
 **Please use the _CreateExampleDatabase.sql script in the ExampleApplication.Database project to create the database before compiling/running the database migrations.**
 
