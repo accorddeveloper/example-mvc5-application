@@ -5,13 +5,21 @@
     using System.Net.Http;
     using System.Web.Http;
     using System.Web.Http.Description;
-    using ExampleApplication.Utilities;
+
+    using ExampleApplication.Radio.Api.Providers;
 
     /// <summary>
     /// Helps find swagger.
     /// </summary>
     public class SwaggerRedirectController : ApiController
     {
+        private readonly ISettingsProvider settings;
+
+        public SwaggerRedirectController(ISettingsProvider settings)
+        {
+            this.settings = settings;
+        }
+
         /// <summary>
         /// Redirects to swagger.
         /// </summary>
@@ -24,9 +32,9 @@
             return response;
         }
 
-        private static string GetSwaggerAddress()
+        private string GetSwaggerAddress()
         {
-            return $"{AppSettings.ProvideValue<string>("Address")}/swagger";
+            return $"{this.settings.Address}/swagger";
         }
     }
 }
