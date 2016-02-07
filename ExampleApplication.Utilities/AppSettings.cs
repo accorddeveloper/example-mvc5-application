@@ -8,7 +8,7 @@
     public static class AppSettings
     {
         /// <summary>
-        /// Providers value for an application settings and casts to a specific type.
+        /// Provides the value of an application setting and changes it to a specific type.
         /// </summary>
         /// <param name="key">The key which is preset in AppSettings</param>
         /// <typeparam name="T">Value type.</typeparam>
