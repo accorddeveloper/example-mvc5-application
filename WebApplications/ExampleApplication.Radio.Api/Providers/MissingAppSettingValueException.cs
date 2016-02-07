@@ -5,15 +5,15 @@
     /// <summary>
     /// Used when an AppSetting value is missing
     /// </summary>
-    public class MissingSettingValueException : ArgumentException
+    public class MissingAppSettingValueException : ArgumentException
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MissingSettingValueException"/> class.
+        /// Initializes a new instance of the <see cref="MissingAppSettingValueException"/> class.
         /// Requires the AppSettings key name.
         /// </summary>
         /// <param name="key"></param>
-        public MissingSettingValueException(string key) :
-            base($"Missing the value for the {key} app setting.")
+        public MissingAppSettingValueException(string key) :
+            base($"The {key} app setting is missing.")
         {
         }
     }

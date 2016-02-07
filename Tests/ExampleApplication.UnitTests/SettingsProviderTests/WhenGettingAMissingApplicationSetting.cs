@@ -54,7 +54,7 @@
         [Then]
         public void ThenItShouldThrowException()
         {
-            Assert.Throws<MissingSettingValueException>(
+            Assert.Throws<MissingAppSettingValueException>(
                 () =>
                 {
                     this.address = this.classUnderTest.Address;

@@ -42,7 +42,7 @@
         /// <summary>
         /// Gets the application's web address.
         /// </summary>
-        /// <exception cref="MissingSettingValueException">
+        /// <exception cref="MissingAppSettingValueException">
         /// Throws the exception when the AppSetting Address is missing.
         /// </exception>
         public string Address
@@ -52,7 +52,7 @@
                 var address = AppSettings.ProvideValue<string>("Address");
                 if (string.IsNullOrEmpty(address))
                 {
-                    throw new MissingSettingValueException(nameof(Address));
+                    throw new MissingAppSettingValueException(nameof(Address));
                 }
                 return address;
             }
