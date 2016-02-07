@@ -1,8 +1,7 @@
 ﻿namespace ExampleApplication.BDD
 {
-    using System;
-
     using NUnit.Framework;
+    using System;
 
     /// <summary>
     /// When happens when an action is performed.

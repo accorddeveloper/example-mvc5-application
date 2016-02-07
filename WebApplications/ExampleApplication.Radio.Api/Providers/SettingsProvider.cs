@@ -32,23 +32,12 @@
         /// <summary>
         /// Gets the application's title.
         /// </summary>
-        /// <exception cref="MissingSettingValueException">
-        /// Throws the exception when the AppSetting Title is missing.
-        /// </exception>
-        public string Title
-        {
-            get
-            {
-                try
-                {
-                    return this.titleProvider.Title;
-                }
-                catch
-                {
-                    throw new MissingSettingValueException(nameof(Title));
-                }
-            }
-        }
+        public string Title => this.titleProvider.Title;
+
+        /// <summary>
+        /// Gets the application's description.
+        /// </summary>
+        public string Description => this.descriptionProvider.Description;
 
         /// <summary>
         /// Gets the application's web address.
@@ -60,35 +49,12 @@
         {
             get
             {
-                try
-                {
-                    return AppSettings.ProvideValue<string>("Address");
-                }
-                catch
+                var address = AppSettings.ProvideValue<string>("Address");
+                if (string.IsNullOrEmpty(address))
                 {
                     throw new MissingSettingValueException(nameof(Address));
                 }
-            }
-        }
-
-        /// <summary>
-        /// Gets the application's description.
-        /// </summary>
-        /// <exception cref="MissingSettingValueException">
-        /// Throws the exception when the AppSetting Description is missing.
-        /// </exception>
-        public string Description
-        {
-            get
-            {
-                try
-                {
-                    return this.descriptionProvider.Description;
-                }
-                catch
-                {
-                    throw new MissingSettingValueException(nameof(Description));
-                }
+                return address;
             }
         }
     }

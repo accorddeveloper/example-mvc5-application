@@ -1,9 +1,8 @@
-﻿namespace ExampleApplication.UnitTests.RadioStationMapperTest
+﻿namespace ExampleApplication.UnitTests.RadioStationMapperTests
 {
-    using BDD;
-
-    using BL.Mappers;
-    using Data.Entities;
+    using ExampleApplication.BDD;
+    using ExampleApplication.BL.Mappers;
+    using ExampleApplication.Data.Entities;
 
     using NUnit.Framework;
 
@@ -32,7 +31,7 @@
         /// </summary>
         protected override void Given()
         {
-            classUnderTest = new RadioStationMapper();
+            this.classUnderTest = new RadioStationMapper();
             this.input = new RadioStation { Name = "Radio", Country = new Country() { Name = "UK" } };
         }
 
@@ -41,7 +40,7 @@
         /// </summary>
         protected override void When()
         {
-            result = classUnderTest.Map(input);
+            this.result = this.classUnderTest.Map(this.input);
         }
 
         /// <summary>

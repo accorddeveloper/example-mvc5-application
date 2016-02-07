@@ -26,6 +26,5 @@
         /// </summary>
         [OneTimeSetUp]
         protected abstract void When();
-
     }
 }

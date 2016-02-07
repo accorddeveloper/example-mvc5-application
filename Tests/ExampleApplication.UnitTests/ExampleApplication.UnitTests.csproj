@@ -49,7 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RadioStationMapperTest\WhenMappingEntityToDto.cs" />
+    <Compile Include="RadioStationMapperTests\WhenMappingEntityToDto.cs" />
+    <Compile Include="SettingsProviderTests\WhenGettingAMissingApplicationSetting.cs" />
+    <Compile Include="SettingsProviderTests\WhenGettingApplicationSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -67,6 +69,10 @@
     <ProjectReference Include="..\..\ExampleApplication.Data\ExampleApplication.Data.csproj">
       <Project>{28d2aa91-8e44-44fb-a946-8cdaed670c16}</Project>
       <Name>ExampleApplication.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WebApplications\ExampleApplication.Radio.Api\ExampleApplication.Radio.Api.csproj">
+      <Project>{ae1965ff-8fd8-45ec-bbbd-94f1a161a20a}</Project>
+      <Name>ExampleApplication.Radio.Api</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

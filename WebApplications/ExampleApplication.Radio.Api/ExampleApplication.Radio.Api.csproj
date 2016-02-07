@@ -101,6 +101,7 @@
     <Compile Include="Controllers\CountriesController.cs" />
     <Compile Include="Controllers\SwaggerRedirectController.cs" />
     <Compile Include="IoC\AssemblyModule.cs" />
+    <Compile Include="Providers\AssemblyInfoProvider.cs" />
     <Compile Include="Providers\DescriptionProvider.cs" />
     <Compile Include="Providers\IDescriptionProvider.cs" />
     <Compile Include="Providers\ISettingsProvider.cs" />
