@@ -16,7 +16,7 @@
         /// Test GetAll Countries.
         /// </summary>
         [Test]
-        public void TestGetAllCountries()
+        public void GetAllCountries()
         {   
             using (var db = new ExampleContext(Connection))
             {

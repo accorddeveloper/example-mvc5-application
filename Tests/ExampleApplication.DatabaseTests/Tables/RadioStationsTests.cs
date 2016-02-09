@@ -16,7 +16,7 @@
         /// Test GetAll RadioStations.
         /// </summary>
         [Test]
-        public void TestGetAllRadioStations()
+        public void GetAllRadioStations()
         {
             using (var db = new ExampleContext(Connection))
             {
