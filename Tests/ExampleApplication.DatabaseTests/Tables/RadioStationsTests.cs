@@ -10,7 +10,7 @@
     /// <summary>
     /// The database tests.
     /// </summary>
-    public class RadioStationsTests : TestSetup
+    public class RadioStationsTests : DatabaseSetup
     {
         /// <summary>
         /// Test GetAll RadioStations.

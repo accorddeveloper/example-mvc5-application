@@ -1,4 +1,4 @@
-﻿namespace ExampleApplication.DatabaseTests.Tables
+﻿namespace ExampleApplication.DatabaseTests
 {
     using ExampleApplication.Data.Entities;
     using ExampleApplication.DatabaseTests.Migrations;
@@ -10,12 +10,12 @@
     /// The base class for unit-testing.
     /// </summary>
     [TestFixture]
-    public abstract class TestSetup
+    public abstract class DatabaseSetup
     {
         protected static string Connection => $"Name={Constants.ConnectionStringName}";
 
         [OneTimeSetUp]
-        public void DatabaseSetup()
+        public void Setup()
         {
             DropAllTables();
 

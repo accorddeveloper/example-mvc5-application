@@ -48,7 +48,7 @@
             public bool PreviewOnly { get; set; }
 
             /// <summary>
-            /// Gets or sets the provider switches.
+            /// Gets the provider switches.
             /// </summary>
             public string ProviderSwitches => null;
 

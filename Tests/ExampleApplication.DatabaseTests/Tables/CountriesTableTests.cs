@@ -10,7 +10,7 @@
     /// <summary>
     /// The database tests.
     /// </summary>
-    public class CountriesTableTests : TestSetup
+    public class CountriesTableTests : DatabaseSetup
     {
         /// <summary>
         /// Test GetAll Countries.
