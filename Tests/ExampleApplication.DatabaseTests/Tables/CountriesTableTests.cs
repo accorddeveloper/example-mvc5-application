@@ -18,7 +18,7 @@
         [Test]
         public void TestGetAllCountries()
         {   
-            using (var db = new ExampleContext(this.Connection))
+            using (var db = new ExampleContext(Connection))
             {
                 ICountriesRepository repository = new CountriesRepository(db);
                 var countries = repository.GetAll();

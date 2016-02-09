@@ -18,7 +18,7 @@
         [Test]
         public void TestGetAllRadioStations()
         {
-            using (var db = new ExampleContext(this.Connection))
+            using (var db = new ExampleContext(Connection))
             {
                 IRadioStationsRepository repository = new RadioStationsRepository(db);
                 var radioStations = repository.GetAll();

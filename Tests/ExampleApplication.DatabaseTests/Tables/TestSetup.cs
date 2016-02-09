@@ -12,7 +12,7 @@
     [TestFixture]
     public abstract class TestSetup
     {
-        protected string Connection => $"Name={Constants.ConnectionStringName}";
+        protected static string Connection => $"Name={Constants.ConnectionStringName}";
 
         [OneTimeSetUp]
         public void DatabaseSetup()
@@ -26,8 +26,7 @@
 
         private static void DropAllTables()
         {
-            string connection = $"Name={Constants.ConnectionStringName}";
-            using (var db = new ExampleContext(connection))
+            using (var db = new ExampleContext(Connection))
             {
                 const string DropConstraints = @"exec sp_MSforeachtable ""declare @name nvarchar(max); set @name = parsename('?', 1); exec sp_MSdropconstraints @name""";
                 db.Database.ExecuteSqlCommand(DropConstraints);
