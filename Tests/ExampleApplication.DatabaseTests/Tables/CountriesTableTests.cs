@@ -1,10 +1,9 @@
-﻿namespace ExampleApplication.DatabaseTests.Tests
+﻿namespace ExampleApplication.DatabaseTests.Tables
 {
     using System.Linq;
 
     using ExampleApplication.Data.Entities;
     using ExampleApplication.Data.Repositories;
-    using ExampleApplication.DatabaseTests.Migrations;
 
     using NUnit.Framework;
 
@@ -13,15 +12,13 @@
     /// </summary>
     public class CountriesTableTests : TestSetup
     {
-        protected string Connection => $"Name={Constants.ConnectionStringName}";
-
         /// <summary>
         /// Test GetAll Countries.
         /// </summary>
         [Test]
         public void TestGetAllCountries()
         {   
-            using (var db = new ExampleContext(Connection))
+            using (var db = new ExampleContext(this.Connection))
             {
                 ICountriesRepository repository = new CountriesRepository(db);
                 var countries = repository.GetAll();

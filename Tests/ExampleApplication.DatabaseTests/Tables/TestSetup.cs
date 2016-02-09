@@ -1,7 +1,6 @@
-﻿namespace ExampleApplication.DatabaseTests.Tests
+﻿namespace ExampleApplication.DatabaseTests.Tables
 {
-    using Data.Entities;
-
+    using ExampleApplication.Data.Entities;
     using ExampleApplication.DatabaseTests.Migrations;
     using ExampleApplication.Utilities;
 
@@ -13,6 +12,8 @@
     [TestFixture]
     public abstract class TestSetup
     {
+        protected string Connection => $"Name={Constants.ConnectionStringName}";
+
         [OneTimeSetUp]
         public void DatabaseSetup()
         {
@@ -28,10 +29,10 @@
             string connection = $"Name={Constants.ConnectionStringName}";
             using (var db = new ExampleContext(connection))
             {
-                var sql1 = @"exec sp_MSforeachtable ""declare @name nvarchar(max); set @name = parsename('?', 1); exec sp_MSdropconstraints @name""";
-                db.Database.ExecuteSqlCommand(sql1);
-                var sql2 = @"exec sp_MSforeachtable ""drop table ?"";";
-                db.Database.ExecuteSqlCommand(sql2);
+                const string DropConstraints = @"exec sp_MSforeachtable ""declare @name nvarchar(max); set @name = parsename('?', 1); exec sp_MSdropconstraints @name""";
+                db.Database.ExecuteSqlCommand(DropConstraints);
+                const string DropTables = @"exec sp_MSforeachtable ""drop table ?"";";
+                db.Database.ExecuteSqlCommand(DropTables);
             }
         }
     }

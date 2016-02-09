@@ -50,7 +50,7 @@
             /// <summary>
             /// Gets or sets the provider switches.
             /// </summary>
-            public string ProviderSwitches { get; set; }
+            public string ProviderSwitches => null;
 
             /// <summary>
             /// Gets or sets the timeout.

@@ -1,28 +1,24 @@
-﻿namespace ExampleApplication.DatabaseTests.Tests
+﻿namespace ExampleApplication.DatabaseTests.Tables
 {
     using System.Linq;
 
     using ExampleApplication.Data.Entities;
     using ExampleApplication.Data.Repositories;
-    using ExampleApplication.DatabaseTests.Migrations;
 
     using NUnit.Framework;
 
     /// <summary>
     /// The database tests.
     /// </summary>
-    public class DatabaseTests : TestSetup
+    public class RadioStationsTests : TestSetup
     {
-        protected string Connection => $"Name={Constants.ConnectionStringName}";
-
         /// <summary>
         /// Test GetAll RadioStations.
         /// </summary>
         [Test]
         public void TestGetAllRadioStations()
         {
-            string connection = $"Name={Constants.ConnectionStringName}";
-            using (var db = new ExampleContext(Connection))
+            using (var db = new ExampleContext(this.Connection))
             {
                 IRadioStationsRepository repository = new RadioStationsRepository(db);
                 var radioStations = repository.GetAll();
