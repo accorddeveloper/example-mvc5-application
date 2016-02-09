@@ -1,6 +1,4 @@
-﻿USE Example;
-
-BEGIN TRANSACTION
+﻿BEGIN TRANSACTION
 BEGIN TRY
 
 IF EXISTS(SELECT * FROM sys.tables WHERE Name = N'RadioStations')

@@ -1,9 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Description/@EntryValue">Migration SQL Create table</s:String>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Text/@EntryValue">USE $DATABASE$;&#xD;
-&#xD;
-BEGIN TRANSACTION&#xD;
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Text/@EntryValue">BEGIN TRANSACTION&#xD;
 BEGIN TRY&#xD;
 &#xD;
 IF EXISTS(SELECT * FROM sys.tables WHERE Name = N'$TABLE$')&#xD;
@@ -34,7 +32,5 @@ END CATCH&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
-	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Field/=DATABASE/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Field/=DATABASE/Order/@EntryValue">0</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Field/=TABLE/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Field/=TABLE/Order/@EntryValue">1</s:Int64></wpf:ResourceDictionary>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=6EB06B7708B695449F7E4FD2C0258216/Field/=TABLE/Order/@EntryValue">0</s:Int64></wpf:ResourceDictionary>

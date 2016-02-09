@@ -1,6 +1,4 @@
-﻿USE Example;
-
-BEGIN TRANSACTION
+﻿BEGIN TRANSACTION
 BEGIN TRY
 
 INSERT INTO [dbo].[RadioStations](Name,CountryID) VALUES('BBC Radio 1', (SELECT TOP 1 ID from [dbo].[Countries] WHERE [Name] = 'United Kindgom'));

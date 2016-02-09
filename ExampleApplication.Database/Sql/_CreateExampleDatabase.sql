@@ -10,11 +10,31 @@ USE Example;
 
 GO
 
-IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'ExampleUser')
-BEGIN
-    CREATE USER ExampleUser FOR LOGIN ExampleUser
-    EXEC sp_addrolemember N'db_owner', N'ExampleUser'
-END;
+CREATE USER ExampleUser FOR LOGIN ExampleUser
+
+GO
+
+EXEC sp_addrolemember N'db_owner', N'ExampleUser'
+
+GO
+
+GRANT EXEC TO ExampleUser;
+
+GO
+
+CREATE DATABASE ExampleDatabaseTests;
+
+GO
+
+USE ExampleDatabaseTests;
+
+GO
+
+CREATE USER ExampleUser FOR LOGIN ExampleUser;
+
+GO
+
+EXEC sp_addrolemember N'db_owner', N'ExampleUser'
 
 GO
 
