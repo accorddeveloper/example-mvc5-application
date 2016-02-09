@@ -116,7 +116,7 @@
     <Compile Include="Providers\IDescriptionProvider.cs" />
     <Compile Include="Providers\ISettingsProvider.cs" />
     <Compile Include="Providers\ITitleProvider.cs" />
-    <Compile Include="Owin\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Providers\MissingAppSettingValueException.cs" />
     <Compile Include="Providers\SettingsProvider.cs" />
     <Compile Include="Providers\TitleProvider.cs" />
