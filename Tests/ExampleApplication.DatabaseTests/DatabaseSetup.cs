@@ -15,7 +15,7 @@
         protected static string Connection => $"Name={Constants.ConnectionStringName}";
 
         [OneTimeSetUp]
-        public void Setup()
+        public void ResetDatabase()
         {
             DropAllTables();
 

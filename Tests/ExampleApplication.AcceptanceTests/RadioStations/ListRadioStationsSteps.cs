@@ -57,6 +57,7 @@
         [Given(@"the API is up and running")]
         public void GivenTheApiIsUpAndRunning()
         {
+            this.ResetDatabase();
             this.localTestServer = TestServer.Create<Startup>();
         }
 
