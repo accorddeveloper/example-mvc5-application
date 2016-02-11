@@ -6,6 +6,7 @@
     using System.Net.Http;
 
     using ExampleApplication.BL.DataTransfer;
+    using ExampleApplication.DatabaseTests;
     using ExampleApplication.Radio.Api.Owin;
 
     using Microsoft.Owin.Testing;
@@ -20,7 +21,7 @@
     /// The steps.
     /// </summary>
     [Binding]
-    public class ListRadioStationsSteps
+    public class ListRadioStationsSteps : DatabaseSetup
     {
         /// <summary>
         /// The string helper.

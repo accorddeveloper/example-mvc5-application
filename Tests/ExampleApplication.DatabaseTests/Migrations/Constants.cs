@@ -8,6 +8,6 @@
         /// <summary>
         /// The connection string name used for testing.
         /// </summary>
-        public const string ConnectionStringName = "TestDatabase";
+        public const string ConnectionStringName = "ExampleDatabase";
     }
 }

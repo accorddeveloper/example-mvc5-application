@@ -147,6 +147,10 @@
       <Project>{ae1965ff-8fd8-45ec-bbbd-94f1a161a20a}</Project>
       <Name>ExampleApplication.Radio.Api</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ExampleApplication.DatabaseTests\ExampleApplication.DatabaseTests.csproj">
+      <Project>{5134c33a-c4b9-4358-9b0c-2370449b3fd6}</Project>
+      <Name>ExampleApplication.DatabaseTests</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
