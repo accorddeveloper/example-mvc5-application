@@ -61,10 +61,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ExampleApplication.BDD\ExampleApplication.BDD.csproj">
-      <Project>{e13f653c-c420-47ab-a00c-2631e951b8a4}</Project>
-      <Name>ExampleApplication.BDD</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\ExampleApplication.BL\ExampleApplication.BL.csproj">
       <Project>{8de64b14-00f0-41d4-9d9c-b83a15b1c047}</Project>
       <Name>ExampleApplication.BL</Name>
@@ -76,6 +72,10 @@
     <ProjectReference Include="..\..\WebApplications\ExampleApplication.Radio.Api\ExampleApplication.Radio.Api.csproj">
       <Project>{ae1965ff-8fd8-45ec-bbbd-94f1a161a20a}</Project>
       <Name>ExampleApplication.Radio.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExampleApplication.BDD\ExampleApplication.BDD.csproj">
+      <Project>{e13f653c-c420-47ab-a00c-2631e951b8a4}</Project>
+      <Name>ExampleApplication.BDD</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

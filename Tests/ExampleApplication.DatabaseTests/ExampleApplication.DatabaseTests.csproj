@@ -85,6 +85,10 @@
       <Project>{57450f45-e4c8-4a47-81ad-eac79c138bcf}</Project>
       <Name>ExampleApplication.Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ExampleApplication.BDD\ExampleApplication.BDD.csproj">
+      <Project>{e13f653c-c420-47ab-a00c-2631e951b8a4}</Project>
+      <Name>ExampleApplication.BDD</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
