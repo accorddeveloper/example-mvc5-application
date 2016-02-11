@@ -10,9 +10,9 @@ This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I w
 - SpecFlow.NUnit
 - AutoFac for Inversion of Control using the Dependency Injection and Service Locator pattern
 - AutoFac.MVC5
-- OWIN
-- AutoFac.OWIN
-- Microsoft.Owin.Testing for running OWIN inside SpecFlow
+- Owin
+- AutoFac.Owin
+- Microsoft.Owin.Testing for running the Open Web Interface for .NET inside SpecFlow
 - ASP.NET MVC 5
 - ASP.NET Web API 2 for the RESTful endpoints
 - Swashbuckle Swagger
