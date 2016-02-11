@@ -17,7 +17,6 @@ This is an example ASP.NET MVC 5 Web API 2 application with AutoFac for IoC. I w
 - ASP.NET Web API 2 for the RESTful endpoints
 - Swashbuckle Swagger
 - Newtonsoft.Json
-- RestSharp
 - Entity Framework 6
 - FluentMigrator
 - FluentMigrator.Tools
