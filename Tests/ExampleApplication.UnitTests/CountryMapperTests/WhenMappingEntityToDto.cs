@@ -2,8 +2,8 @@
 {
     using BDD;
 
-    using ExampleApplication.BL.Mappers;
-    using ExampleApplication.Data.Entities;
+    using BL.Mappers;
+    using Data.Entities;
 
     using NUnit.Framework;
 
