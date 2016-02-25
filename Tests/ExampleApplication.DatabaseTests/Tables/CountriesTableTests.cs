@@ -17,7 +17,7 @@
         /// </summary>
         [Test]
         public void GetAllCountries()
-        {   
+        {
             using (var db = new ExampleContext(Connection))
             {
                 ICountriesRepository repository = new CountriesRepository(db);

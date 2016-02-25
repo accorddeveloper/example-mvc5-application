@@ -22,12 +22,8 @@
         /// <summary>
         /// Provides the value of the connection string by its name.
         /// </summary>
-        /// <param name="name">
-        /// The name in the config file.
-        /// </param>
-        /// <returns>
-        /// The value <see cref="string"/>.
-        /// </returns>
+        /// <param name="name">The name in the config file.</param>
+        /// <returns>The value <see cref="string"/>.</returns>
         public static string ProvideConnectionString(string name)
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;

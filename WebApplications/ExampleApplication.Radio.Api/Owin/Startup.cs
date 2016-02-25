@@ -5,11 +5,11 @@
 
     using Autofac.Integration.WebApi;
 
-    using ExampleApplication.Utilities;
+    using Utilities;
     using Swashbuckle.Application;
 
     using global::Owin;
-    using ExampleApplication.Radio.Api.Providers;
+    using Providers;
 
     /// <summary>
     /// The OWIN startup class.
@@ -61,8 +61,15 @@
         /// <param name="config">The OWIN config.</param>
         private static void MapRoutes(HttpConfiguration config)
         {
+            var settingsProvider = IoCProvider.Resolve<ISettingsProvider>();
+
             config.MapHttpAttributeRoutes();
-            config.Routes.MapHttpRoute("Redirect to Swagger", "", new { controller = "SwaggerRedirect" });
+            config.Routes.MapHttpRoute(
+                            name: "swagger",
+                            routeTemplate: "",
+                            defaults: null,
+                            constraints: null,
+                            handler: new RedirectHandler(message => settingsProvider.Address, "swagger"));
         }
 
         /// <summary>

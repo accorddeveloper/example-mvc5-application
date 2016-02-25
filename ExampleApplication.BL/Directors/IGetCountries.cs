@@ -12,9 +12,7 @@
         /// <summary>
         /// Gets all the countries.
         /// </summary>
-        /// <returns>
-        /// The <see cref="Country"/>.
-        /// </returns>
+        /// <returns>The <see cref="Country"/>.</returns>
         IEnumerable<Country> GetCountries();
     }
 }

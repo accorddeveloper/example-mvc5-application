@@ -101,6 +101,5 @@
             Assert.That(this.result.Skip(2).First().Name, Is.EqualTo("NRJ"));
             Assert.That(this.result.Skip(2).First().Country, Is.EqualTo("France"));
         }
-
     }
 }

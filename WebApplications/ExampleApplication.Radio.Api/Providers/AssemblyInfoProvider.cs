@@ -1,8 +1,6 @@
 ﻿namespace ExampleApplication.Radio.Api.Providers
 {
     using System.Reflection;
-
-    using ExampleApplication.Radio.Api.Owin;
     using ExampleApplication.Utilities;
 
     /// <summary>

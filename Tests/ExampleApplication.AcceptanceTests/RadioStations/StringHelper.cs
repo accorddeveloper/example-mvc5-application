@@ -1,6 +1,7 @@
 namespace ExampleApplication.AcceptanceTests.RadioStations
 {
     using System.Linq;
+
     // Import static members of the Regex class.
     using static System.Text.RegularExpressions.Regex;
 

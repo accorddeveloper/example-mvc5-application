@@ -27,12 +27,8 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="GetRadioStationsDirector"/> class.
         /// </summary>
-        /// <param name="repository">
-        /// The repository.
-        /// </param>
-        /// <param name="mapper">
-        /// The mapper.
-        /// </param>
+        /// <param name="repository">The repository.</param>
+        /// <param name="mapper">The mapper.</param>
         public GetRadioStationsDirector(IRadioStationsRepository repository, IEntityToDtoMapper<Entities.RadioStation, Dto.RadioStation> mapper)
         {
             this.repository = repository;
@@ -42,12 +38,10 @@
         /// <summary>
         /// Gets all the radio stations.
         /// </summary>
-        /// <returns>
-        /// The <see cref="Dto.RadioStation"/>.
-        /// </returns>
+        /// <returns>The <see cref="Dto.RadioStation"/>.</returns>
         public IEnumerable<Dto.RadioStation> GetRadioStations()
         {
             return this.repository.GetAll().Select(a => this.mapper.Map(a));
-        } 
+        }
     }
 }

@@ -109,7 +109,6 @@
   <ItemGroup>
     <Compile Include="Controllers\CountriesController.cs" />
     <Compile Include="Controllers\RadioStationsController.cs" />
-    <Compile Include="Controllers\SwaggerRedirectController.cs" />
     <Compile Include="IoC\AssemblyModule.cs" />
     <Compile Include="Providers\AssemblyInfoProvider.cs" />
     <Compile Include="Providers\DescriptionProvider.cs" />

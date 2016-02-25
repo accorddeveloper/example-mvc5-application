@@ -12,9 +12,7 @@
         /// <summary>
         /// Gets all the radio stations.
         /// </summary>
-        /// <returns>
-        /// The <see cref="RadioStation"/>.
-        /// </returns>
+        /// <returns>The <see cref="RadioStation"/>.</returns>
         IEnumerable<RadioStation> GetRadioStations();
     }
 }
